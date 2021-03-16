@@ -1,9 +1,9 @@
 <div class="container">
 
   {{!-- title --}}
-  <h1>你想對誰說幹話?</h1>
+  <h1 class="title">你想對誰說幹話?</h1>
 
-  <form method="POST">
+  <form method="POST" id="form">
     {{!-- area for selection--}}
     <div class="selection-container">
 
@@ -15,7 +15,7 @@
         </div>
         {{!-- radio button --}}
         <div class="button-container">
-          <input type="radio" id="engineer" name="selection" value="engineer">
+          <input type="radio" id="engineer" name="selection" value="engineer" {{#checkRadio1 target}} {{/checkRadio1}}>
           <label for="engineer">工程師</label>
         </div>
 
@@ -30,7 +30,7 @@
         </div>
         {{!-- radio button --}}
         <div class="button-container">
-          <input type="radio" id="designer" name="selection" value="designer">
+          <input type="radio" id="designer" name="selection" value="designer" {{#checkRadio2 target}} {{/checkRadio2}}>
           <label for="designer">設計師</label>
         </div>
 
@@ -44,7 +44,8 @@
         </div>
         {{!-- radio button --}}
         <div class="button-container">
-          <input type="radio" id="entrepreneur" name="selection" value="entrepreneur">
+          <input type="radio" id="entrepreneur" name="selection" value="entrepreneur" {{#checkRadio3 target}}
+            {{/checkRadio3}}>
           <label for="entrepreneur">創業家</label>
         </div>
       </div>
@@ -55,7 +56,7 @@
     {{!-- chat generator --}}
     <div class="generator-container d-flex">
 
-      <button class="btn btn-info" type="submit">產生幹話</button>
+      <button class="btn btn-info" id="submit-button" type="submit">產生幹話</button>
       <div class='random-quote'>
         {{quote}}
       </div>

@@ -5,6 +5,11 @@ const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const port = 3000
 const chatGenerator = require('./controller/chatGenerator')
+const remainCheck = require('./controller/remainCheck')
+const checkRadio1 = remainCheck.checkRadio1()
+const checkRadio2 = remainCheck.checkRadio2()
+const checkRadio3 = remainCheck.checkRadio3()
+
 
 // Set view engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
@@ -27,7 +32,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const target = req.body.selection
   const quote = chatGenerator(target)
-  res.render('index', { quote })
+  res.render('index', { target, quote })
 })
 
 
