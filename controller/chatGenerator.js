@@ -1,5 +1,11 @@
 function chatGenerator(target) {
 
+  // if user not click radio buttons
+  if (target === undefined) {
+    return "請選擇一位導師說幹話"
+  }
+
+  // user click radio buttons
   const nameTarget = {
     engineer: "工程師",
     designer: "設計師",
@@ -14,15 +20,19 @@ function chatGenerator(target) {
 
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-
+  // random Index
   const randomIndex1 = Math.floor(Math.random() * 4)
   const randomIndex2 = Math.floor(Math.random() * 4)
 
   let quote = nameTarget[target] + task[target][randomIndex1] + phrase[randomIndex2]
 
+  // return quote
   return quote
 
 }
+
+
+
 // export as module
 
 module.exports = chatGenerator
