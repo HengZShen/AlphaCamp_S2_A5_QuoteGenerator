@@ -1,49 +1,44 @@
-const handlebars = require('handlebars')
+const handlebars = require('handlebars')  // 也會匯出成module的一部分?
 
 const remainCheck = {
 
-
+  // check first radio button
   checkRadio1(selection) {
     handlebars.registerHelper('checkRadio1', function (selection) {
       if (selection === "engineer") {
-        console.log('true')
         return 'checked'
       } else {
-        console.log('false')
         return
       }
     })
 
   },
+
+  // check second radio button
   checkRadio2(selection) {
     handlebars.registerHelper('checkRadio2', function (selection) {
       if (selection === "designer") {
-        console.log('true')
         return 'checked'
       } else {
-        console.log('false')
         return
       }
     })
 
   },
+
+  // check third radio button
   checkRadio3(selection) {
     handlebars.registerHelper('checkRadio3', function (selection) {
       if (selection === "entrepreneur") {
-        console.log('true')
         return 'checked'
       } else {
-        console.log('false')
         return
       }
     })
-
   },
-
 
 }
 
 
-
-
+// export as a module
 module.exports = remainCheck

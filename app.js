@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const port = 3000
 const chatGenerator = require('./controller/chatGenerator')
+// registerHelper
 const remainCheck = require('./controller/remainCheck')
 const checkRadio1 = remainCheck.checkRadio1()
 const checkRadio2 = remainCheck.checkRadio2()
