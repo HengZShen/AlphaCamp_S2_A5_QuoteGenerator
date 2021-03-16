@@ -1,1 +1,72 @@
-<h1>TEst</h1>
+<div class="container">
+
+  {{!-- title --}}
+  <h1>你想對誰說幹話?</h1>
+
+  <form method="POST">
+    {{!-- area for selection--}}
+    <div class="selection-container">
+
+      {{!-- selection one --}}
+      <div class="selection d-flex flex-column align-items-center">
+        {{!-- avatar --}}
+        <div class="avatar-container">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="">
+        </div>
+        {{!-- radio button --}}
+        <div class="button-container">
+          <input type="radio" id="engineer" name="selection">
+          <label for="engineer">工程師</label>
+        </div>
+
+      </div>
+
+
+      {{!-- selection two --}}
+      <div class="selection d-flex flex-column align-items-center">
+        {{!-- avatar --}}
+        <div class="avatar-container">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="">
+        </div>
+        {{!-- radio button --}}
+        <div class="button-container">
+          <input type="radio" id="designer" name="selection">
+          <label for="designer">設計師</label>
+        </div>
+
+      </div>
+
+      {{!-- selection three --}}
+      <div class="selection d-flex flex-column align-items-center">
+        {{!-- avatar --}}
+        <div class="avatar-container">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="">
+        </div>
+        {{!-- radio button --}}
+        <div class="button-container">
+          <input type="radio" id="founder" name="selection">
+          <label for="founder">創業家</label>
+        </div>
+      </div>
+
+    </div>
+
+
+    {{!-- chat generator --}}
+    <div class="generator-container d-flex">
+
+      <button type="submit">產生幹話</button>
+      <div class='random-quote'>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis beatae maiores itaque, sapiente vitae
+        voluptate praesentium eos ipsam laudantium dolore quibusdam molestias quam hic laborum, soluta reiciendis
+        repellendus inventore delectus.
+      </div>
+
+
+    </div>
+
+  </form>
+
+
+
+</div>
