@@ -4,6 +4,7 @@ const app = express()
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const port = 3000
+const chatGenerator = require('./controller/chatGenerator')
 
 // Set view engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
@@ -23,14 +24,11 @@ app.get('/', (req, res) => {
 
 
 
+app.post('/', (req, res) => {
 
-
-
-
-
-
-
-
+  const quote = chatGenerator()
+  res.render('index', { quote: quote })
+})
 
 
 
