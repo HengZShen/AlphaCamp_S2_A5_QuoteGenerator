@@ -25,9 +25,9 @@ app.get('/', (req, res) => {
 
 
 app.post('/', (req, res) => {
-
-  const quote = chatGenerator()
-  res.render('index', { quote: quote })
+  const target = req.body.selection
+  const quote = chatGenerator(target)
+  res.render('index', { quote })
 })
 
 

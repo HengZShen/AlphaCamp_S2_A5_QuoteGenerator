@@ -1,5 +1,4 @@
-function chatGenerator() {
-  const target = 'designer'
+function chatGenerator(target) {
 
   const nameTarget = {
     engineer: "工程師",
