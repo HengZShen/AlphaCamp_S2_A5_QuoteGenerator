@@ -15,7 +15,8 @@
         </div>
         {{!-- radio button --}}
         <div class="button-container">
-          <input type="radio" id="engineer" name="selection" value="engineer" {{#checkRadio1 target}} {{/checkRadio1}}>
+          <input type="radio" id="engineer" name="selection" value="engineer" {{#checkRadio target 'engineer' }}
+            {{/checkRadio}}>
           <label for="engineer">工程師</label>
         </div>
 
@@ -30,7 +31,8 @@
         </div>
         {{!-- radio button --}}
         <div class="button-container">
-          <input type="radio" id="designer" name="selection" value="designer" {{#checkRadio2 target}} {{/checkRadio2}}>
+          <input type="radio" id="designer" name="selection" value="designer" {{#checkRadio target "designer" }}
+            {{/checkRadio}}>
           <label for="designer">設計師</label>
         </div>
 
@@ -44,8 +46,8 @@
         </div>
         {{!-- radio button --}}
         <div class="button-container">
-          <input type="radio" id="entrepreneur" name="selection" value="entrepreneur" {{#checkRadio3 target}}
-            {{/checkRadio3}}>
+          <input type="radio" id="entrepreneur" name="selection" value="entrepreneur" {{#checkRadio
+            target "entrepreneur" }} {{/checkRadio}}>
           <label for="entrepreneur">創業家</label>
         </div>
       </div>
