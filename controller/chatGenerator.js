@@ -1,3 +1,10 @@
+// random Number
+function randomNum() {
+
+  return Math.floor(Math.random() * 4)
+}
+
+// chat generate
 function chatGenerator(target) {
 
   // if user not click radio buttons
@@ -20,11 +27,9 @@ function chatGenerator(target) {
 
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-  // random Index
-  const randomIndex1 = Math.floor(Math.random() * 4)
-  const randomIndex2 = Math.floor(Math.random() * 4)
 
-  let quote = nameTarget[target] + task[target][randomIndex1] + phrase[randomIndex2]
+  // quotes
+  let quote = nameTarget[target] + task[target][randomNum()] + phrase[randomNum()]
 
   // return quote
   return quote
